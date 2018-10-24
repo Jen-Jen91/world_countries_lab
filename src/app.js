@@ -8,15 +8,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const country = new Country();
   country.getData();
+  country.bindEvents();
 
   const selectDropdown = document.querySelector("select#countries");
   const selectView = new SelectView(selectDropdown);
   selectView.bindEvents();
 
-  // const countryData = new Country();
-  // countryData.bindEvents();
-
-
-
+  const info = document.querySelector("div#country");
+  const resultView = new ResultView(info);
+  resultView.bindEvents();
 
 });
