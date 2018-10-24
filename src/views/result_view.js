@@ -8,7 +8,7 @@ ResultView.prototype.bindEvents = function () {
   PubSub.subscribe("Country:selected-country", (event) => {
     const country = event.detail;
     this.display(country);
-    console.log(country);
+    //console.log(country);
   });
 };
 
@@ -22,7 +22,7 @@ ResultView.prototype.display = function (country) {
   const flag = document.createElement("IMG");
   flag.setAttribute("src", country.flag);
   flag.setAttribute("width", "400");
-  flag.setAttribute("height", "200");
+  flag.setAttribute("height", "225");
   this.container.appendChild(flag);
 
   const regionTitle = document.createElement("h2");
